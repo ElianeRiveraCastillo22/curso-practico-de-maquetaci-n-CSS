@@ -1,0 +1,36 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header__socialNetworks {
+    background: var(--color-primary);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 1.25rem 1rem;
+}
+.socialNetworks {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 1.25rem;
+}
+section.header__paths a{
+    text-decoration: underline;
+    font-size: 16px;
+}
+.socialNetworks__icon img{
+    max-width: 1.5rem;
+}
+
+.header__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1.25rem 1rem;
+    align-items: center;
+}
+.nav__logo a img{
+    height: 3rem;
+}
