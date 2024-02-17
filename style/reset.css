@@ -49,7 +49,7 @@ form, input, textarea, select, button, label{
 }
 body{
     height: 100dvb;
-    width: 100%;
+    width: 100vw;
     font-size: 100%;
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
