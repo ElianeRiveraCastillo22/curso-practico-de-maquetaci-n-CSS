@@ -16,4 +16,5 @@ section.footer__txt {
     font-size: 14px;
     color: white;
     text-align: center;
+    width: 100%;
 }
