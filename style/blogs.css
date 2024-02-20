@@ -6,11 +6,12 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    max-width: 1440px;
 }
 .newsPost {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     background: #e6e9ed;
     padding: 1rem;
     row-gap: 1rem;
@@ -27,6 +28,7 @@
     row-gap: .75rem;
     align-items: center;
     padding-bottom: 1rem;
+    justify-content: center
 }
 .newsPostImg {
     width: 100%;
@@ -55,13 +57,13 @@
 .newPostInfo__title,.blogPost__title  {
     width: 100%;
     text-align: center;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: clamp(1.25rem, 0.893rem + 0.952vw, 1.75rem);
+    font-weight: 900;
 }
 .newPostInfo__text,.blogPost__text {
     text-align: center;
     font-weight: 300;
-    font-size: 12px;
+    font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem)
 }
 .newPostInfo__btn, .blogPost__btn  {
     padding: 8px 16px;
@@ -72,8 +74,9 @@
 }
 .blogPosts__posts {
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 1.25rem;
+    padding-bottom: 2rem;
 }
 .blogPost__post {
     width: 100%;
@@ -87,4 +90,49 @@
 }
 .blogPost__img img{
     width: 100%;
+}
+@media (width >= 320px) {
+
+}
+@media (width >= 375px) {
+
+}
+@media (width >= 425px) {
+}
+
+@media (width >= 768px) {
+    .newsPost {
+        padding: 2rem 6rem;
+        column-gap: 2rem;
+        grid-template-columns: 1.5fr 2fr;
+    }
+    .newPostInfo__title, .blogPost__title {
+        text-align: start;
+    }
+    .newPostInfo__text, .blogPost__text {
+        text-align: start;
+    }
+    .newsPost__newPostInfo {
+        align-items: flex-start;
+    }
+    .newsPostImg__title{
+        text-align: start;
+    }
+    .blogPosts {
+        padding: 2rem 6rem;
+    }
+}
+@media (width >= 1024px) {
+    .newsPost {
+        padding: 2rem 10rem;
+    }
+    .blogPosts {
+        padding: 2rem 10rem;
+    }
+}
+@media (width >= 1440px) {
+
+}
+@media (width >= 2560px) {
+
 }
