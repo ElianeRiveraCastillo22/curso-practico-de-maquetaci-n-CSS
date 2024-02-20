@@ -7,17 +7,21 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .homeContent div{
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 36% 28px;
 }
 .homeContent__text{
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: clamp(1.25rem, -0.536rem + 4.762vw, 3.75rem);
     font-weight: 900;
     letter-spacing: 10px;
 }
@@ -28,6 +32,9 @@
     border: 1px white solid;
     border-radius: 2px;
     margin-top: 3.5rem;
+}
+.homeContent__btn a{
+    font-size: clamp(0.75rem, 0.571rem + 0.476vw, 1rem);;
 }
 .homeContent__btn:hover{
     transform: scale(1.1);
@@ -52,7 +59,9 @@
 
 }
 @media (width >= 1024px) {
-
+    .homeContent div {
+        width: 60%;
+    }
 }
 @media (width >= 1440px) {
 
